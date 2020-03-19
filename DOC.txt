@@ -1,0 +1,8 @@
+The API runs at localhost:8888/api/.
+
+GET authorization: <url>/?auth=<username>:<password>.
+POST authorization: the same as GET, but in request body.
+
+GET /api/show - Show all data from data.txt. Requires GET and header authorization.
+POST /api/add  - Add an entry (a user) to data.txt. Requires POST, GET and header authorization.
+POST /api/delete - Delete an entry (a user) from data.txt. Requires POST, GET and header authorization.
