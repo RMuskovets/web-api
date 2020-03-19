@@ -59,7 +59,7 @@ def post():
 
 @app.route('/api/delete', methods=['POST'])
 @auth.login_required
-def delete(inp):
+def delete():
     if not auth_in_url() or not post_auth():
         return '{"error":"auth"}'
     post = request.form

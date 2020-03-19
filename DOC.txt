@@ -25,4 +25,8 @@ you need to add basic authentication with credentials from the data.txt file
 
 GET /api/show - Show all data from data.txt. Requires GET and header (http auth) authorization.
 POST /api/add  - Add an entry (a user) to data.txt. Requires POST and header (http auth) authorization.
+To add some new data you should create the pare of needed values in the request's body after the "auth" key
+key = username value = the data, need to be added
+key = password value = the data, need to be added
+
 POST /api/delete - Delete an entry (a user) from data.txt. Requires POST, GET and header (http auth) authorization.
