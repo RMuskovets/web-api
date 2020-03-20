@@ -6,7 +6,7 @@ window.spec = {
   },
   "servers": [
     {
-      "url": "http://localhost"
+      "url": "http://localhost:8888"
     }
   ],
   "paths": {
@@ -133,7 +133,7 @@ window.spec = {
   "components": {
     "schemas": {
       "Response": {
-        "description": "A typical response that can contain an error string and/or response data.  \nError string can be either 'auth-GET' or 'auth-POST' depending on error.  \nError string can also be null, that means no error appeared.  \n'auth-GET' error string means you need to add query parameter 'auth'.  \n'auth-POST' error string means you need to add POST parameter 'auth'.  \n",
+        "description": "A typical response that can contain an error string and/or response data.  \nError string can be 'auth-GET', 'auth-POST', 'auth-HTTP' or 'not-found' depending on error.  \nError string can also be null, that means no error appeared.  \n'auth-GET' error string means you need to add query parameter 'auth'.  \n'auth-POST' error string means you need to add POST parameter 'auth'.  \n'auth-HTTP' error string means you need to add HTTP authorization.  \n'not-found' error string means the user you were searching for is not found.\n",
         "type": "object",
         "properties": {
           "error": {
