@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3c71b085-ea6c-4385-82dc-68dca7439da0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main3.py" beforeDir="false" afterPath="$PROJECT_DIR$/main3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +32,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web-api-generated" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -153,8 +157,42 @@
       <option name="project" value="LOCAL" />
       <updated>1584697115667</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update specs HTML">
+      <created>1584697595764</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1584697595764</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update specs YAML">
+      <created>1584697640619</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1584697640619</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update specs YAML">
+      <created>1584697652191</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1584697652191</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="remove old &amp; unnecessary files" />
@@ -165,13 +203,19 @@
     <MESSAGE value="remove venv from Git" />
     <MESSAGE value="remove search bar" />
     <MESSAGE value="update specs &amp; main.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="update specs &amp; main.py" />
+    <MESSAGE value="update specs HTML" />
+    <MESSAGE value="update specs YAML" />
+    <option name="LAST_COMMIT_MESSAGE" value="update specs YAML" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="597" y="96" width="782" height="912" key="CommitChangelistDialog2" timestamp="1584697640378">
+    <state x="597" y="96" width="782" height="912" key="CommitChangelistDialog2" timestamp="1584697651976">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="597" y="96" width="782" height="912" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584697640378" />
+    <state x="597" y="96" width="782" height="912" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584697651976" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584698951484">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1584698951484" />
     <state width="1830" height="278" key="GridCell.Tab.0.bottom" timestamp="1584123943113">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -188,10 +232,14 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1830" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1584123943112" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584694193959">
+    <state x="482" y="187" key="SettingsEditor" timestamp="1584702274024">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584694193959" />
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1584702274024" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584697674173">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584697674173" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1584689648894">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
