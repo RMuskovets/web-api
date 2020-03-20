@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c71b085-ea6c-4385-82dc-68dca7439da0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web-api.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main3.py" beforeDir="false" afterPath="$PROJECT_DIR$/main3.py" afterDir="false" />
-    </list>
+    <list default="true" id="3c71b085-ea6c-4385-82dc-68dca7439da0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,18 +101,42 @@
       <option name="project" value="LOCAL" />
       <updated>1584367005238</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix not always error:auth when error with auth">
+      <created>1584693744908</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584693744908</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add OpenAPI YAML spec">
+      <created>1584693758740</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584693758740</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add OpenAPI YAML to HTML converter">
+      <created>1584693972568</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584693972568</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="remove old &amp; unnecessary files" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove old &amp; unnecessary files" />
+    <MESSAGE value="fix not always error:auth when error with auth" />
+    <MESSAGE value="add OpenAPI YAML spec" />
+    <MESSAGE value="add OpenAPI YAML to HTML converter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add OpenAPI YAML to HTML converter" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="597" y="96" width="782" height="912" key="CommitChangelistDialog2" timestamp="1584693758629">
+    <state x="597" y="96" width="782" height="912" key="CommitChangelistDialog2" timestamp="1584693972425">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="597" y="96" width="782" height="912" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584693758629" />
+    <state x="597" y="96" width="782" height="912" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584693972425" />
     <state width="1830" height="278" key="GridCell.Tab.0.bottom" timestamp="1584123943113">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
