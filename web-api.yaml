@@ -64,19 +64,31 @@ paths:
 components:
   schemas:
     Response:
+      description: |
+        A typical response that can contain an error string and/or response data.
+        Error string can be either 'auth-GET' or 'auth-POST' depending on error.
+        Error string can also be null, that means no error appeared.
+        'auth-GET' error string means you need to add query parameter 'auth'.
+        'auth-POST' error string means you need to add POST parameter 'auth'.
       type: object
       properties:
         error:
           type: string
+          enum:
+            - 'auth-GET'
+            - 'auth-POST'
           nullable: true
-          example: auth
+      example: {"error":null}
       minProperties: 1
     BodyAuthorization:
       description:
         A type of authorization used only in POST requests.
-        Is put in the "auth" parameter of the form data, and is in format "username:password".
-      type: string
-      example: admin:admin
+        Has only one property 'auth', which is used to authorize the client and is in format "username:password".
+      type: object
+      properties:
+        auth:
+          type: string
+          example: 'admin:admin'
     QueryAuthorization:
       description:
         A type of authorization used in both GET and POST requests.
@@ -85,12 +97,23 @@ components:
       example: admin:admin
     KeyValuePair:
       description:
-        A key-value pair in format "key:value".
-      type: string
+        A key-value pair.
+      type: object
+      properties:
+        username:
+          type: string
+          example: 'admin'
+        password:
+          type: string
+          example: 'admin'
     Key:
       description:
         A key from data.txt.
-      type: string
+      type: object
+      properties:
+        username:
+          type: string
+          example: 'admin'
   securitySchemes:
     basic:
       type: http

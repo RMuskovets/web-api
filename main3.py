@@ -32,7 +32,7 @@ def post_auth():
 @auth.login_required
 def get():
     if not header_auth():
-        return '{"error":"auth"}'
+        return '{"error":"auth-GET"}'
     l = []
     for l_ in open('data.txt', 'r').readlines():
         n, p = l_.split(':')
@@ -43,21 +43,25 @@ def get():
 @app.route('/api/add', methods=['POST'])
 @auth.login_required
 def post():
-    if not header_auth() or not post_auth():
-        return '{"error":"auth"}'
+    if not header_auth():
+        return '{"error":"auth-GET"}'
+    if not post_auth():
+        return '{"error":"auth-POST"}'
     post = request.form
     nm, pw = post['username'], post['password']
     l = f'{nm}:{pw}\n'
     with open('data.txt', 'a') as f:
         f.write(l)
         f.flush()
-    return '["ok"]'
+    return '{"error":null}'
 
 @app.route('/api/delete', methods=['POST'])
 @auth.login_required
 def delete(inp):
-    if not header_auth() or not post_auth():
-        return '{"error":"auth"}'
+    if not header_auth():
+        return '{"error":"auth-GET"}'
+    if not post_auth():
+        return '{"error":"auth-POST"}'
     post = request.form
     nm = post['username']
     ls = open('data.txt', 'r').readlines()
