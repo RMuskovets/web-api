@@ -13,7 +13,7 @@ def check_pass(nm, pw):
     return False
 
 def header_auth():
-    if request.args['auth']:
+    if 'auth' in request.args and request.args['auth']:
         auth = request.args['auth']
         if ':' in auth:
             if check_pass(auth.split(':')[0], auth.split(':')[1]):
@@ -21,7 +21,7 @@ def header_auth():
     return False
 
 def post_auth():
-    if request.form['auth']:
+    if 'auth' in request.form and request.form['auth']:
         auth = request.form['auth']
         if ':' in auth:
             if check_pass(auth.split(':')[0], auth.split(':')[1]):
@@ -40,7 +40,7 @@ def get():
         l.append(f'"{n}":"{p}"')
     return '{' + ','.join(l) + '}'
 
-@app.route('/api/add')
+@app.route('/api/add', methods=['POST'])
 @auth.login_required
 def post():
     if not header_auth() or not post_auth():
@@ -53,7 +53,7 @@ def post():
         f.flush()
     return '["ok"]'
 
-@app.route('/api/delete')
+@app.route('/api/delete', methods=['POST'])
 @auth.login_required
 def delete(inp):
     if not header_auth() or not post_auth():
@@ -68,6 +68,6 @@ def delete(inp):
     with open('data.txt', 'w') as f:
         f.write('\n'.join(nls))
         f.flush()
-    return '["ok"]'
+    return '{"error":null}'
 
 app.run('', 8888)
