@@ -1,0 +1,209 @@
+window.spec = {
+  "openapi": "3.0.1",
+  "info": {
+    "title": "web-api",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost"
+    }
+  ],
+  "paths": {
+    "/api/show": {
+      "get": {
+        "summary": "Show all data",
+        "description": "Returns all data in JSON format, e.g. \"{\"a\":\"b\"}\"",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/QueryAuthorization"
+          }
+        ],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "All data in JSON dictionary",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "example": {
+                    "a": "b"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/add": {
+      "post": {
+        "summary": "Add a key:value pair to data.txt",
+        "description": "Adds the given pair to data.txt.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/BodyAuthorization"
+                  },
+                  {
+                    "$ref": "#/components/schemas/KeyValuePair"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/QueryAuthorization"
+          }
+        ],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Will return a Response.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/delete": {
+      "post": {
+        "summary": "Removes a pair from data.txt",
+        "description": "Removes a key:value pair from data.txt by given key.",
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Will return a Response.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/QueryAuthorization"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/BodyAuthorization"
+                  },
+                  {
+                    "$ref": "#/components/schemas/Key"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Response": {
+        "description": "A typical response that can contain an error string and/or response data.  \nError string can be either 'auth-GET' or 'auth-POST' depending on error.  \nError string can also be null, that means no error appeared.  \n'auth-GET' error string means you need to add query parameter 'auth'.  \n'auth-POST' error string means you need to add POST parameter 'auth'.  \n",
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "enum": [
+              "auth-GET",
+              "auth-POST"
+            ],
+            "nullable": true
+          }
+        },
+        "example": {
+          "error": null
+        },
+        "minProperties": 1
+      },
+      "BodyAuthorization": {
+        "description": "A type of authorization used only in POST requests. Has only one property 'auth', which is used to authorize the client and is in format \"username:password\".",
+        "type": "object",
+        "properties": {
+          "auth": {
+            "type": "string",
+            "example": "admin:admin"
+          }
+        }
+      },
+      "QueryAuthorization": {
+        "description": "A type of authorization used in both GET and POST requests. Is put in the \"auth\" query parameter and is in format \"username:password\".",
+        "type": "string",
+        "example": "admin:admin"
+      },
+      "KeyValuePair": {
+        "description": "A key-value pair.",
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "example": "admin"
+          },
+          "password": {
+            "type": "string",
+            "example": "admin"
+          }
+        }
+      },
+      "Key": {
+        "description": "A key from data.txt.",
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "example": "admin"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    },
+    "parameters": {
+      "QueryAuthorization": {
+        "name": "auth",
+        "in": "query",
+        "schema": {
+          "$ref": "#/components/schemas/QueryAuthorization"
+        }
+      }
+    }
+  }
+};
