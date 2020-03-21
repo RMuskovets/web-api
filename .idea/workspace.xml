@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c71b085-ea6c-4385-82dc-68dca7439da0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web-api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOC.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DOC.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main3.py" beforeDir="false" afterPath="$PROJECT_DIR$/main3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../web-api-generated" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -208,9 +214,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="update specs YAML" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="597" y="96" width="782" height="912" key="CommitChangelistDialog2" timestamp="1584702884902">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="104" y="27" width="1565" height="968" key="CommitChangelistDialog2" timestamp="1584787717333">
+      <screen x="0" y="27" width="1680" height="968" />
     </state>
+    <state x="104" y="27" width="1565" height="968" key="CommitChangelistDialog2/0.27.1680.968/1680.0.1280.1024@0.27.1680.968" timestamp="1584787717333" />
     <state x="597" y="96" width="782" height="912" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584702884902" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584698951484">
       <screen x="67" y="27" width="1853" height="1053" />
@@ -232,9 +239,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1830" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1584123943112" />
-    <state x="482" y="187" key="SettingsEditor" timestamp="1584702274024">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="376" y="174" key="SettingsEditor" timestamp="1584787329859">
+      <screen x="0" y="27" width="1680" height="968" />
     </state>
+    <state x="376" y="174" key="SettingsEditor/0.27.1680.968/1680.0.1280.1024@0.27.1680.968" timestamp="1584787329859" />
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1584702274024" />
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584697674173">
       <screen x="67" y="27" width="1853" height="1053" />

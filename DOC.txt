@@ -1,8 +1,32 @@
-The API runs at localhost:8888/api/.
+To work with project you should have python 3.6+ installed
 
-GET authorization: <url>/?auth=<username>:<password>.
-POST authorization: the same as GET, but in request body.
+To start using API you need to:
+1) download the project
+2) unzip files to /home/user_name/API/
+3) connect project to IDE and create virtual environment (File - Settings - select project - Project Interpreter - Add)
+4) run pip3 install -r requirements.txt  (if pip3 not installed -> install in on terminal)
+5) try to run "python main3.py" on terminal (install the needed packages if the errors occurred)
+6) executed command will looks like https://i.imgur.com/6IP4aG0.png
+7) then you can create and send your requests
 
-GET /api/show - Show all data from data.txt. Requires GET and header authorization.
-POST /api/add  - Add an entry (a user) to data.txt. Requires POST, GET and header authorization.
-POST /api/delete - Delete an entry (a user) from data.txt. Requires POST, GET and header authorization.
+The API runs at localhost:8888/api/api_name
+for all authorizations use the data from data.txt file
+
+GET authorization:
+<url>/?auth=username:password
+
+POST authorization:
+the same as GET, but in request body
+key = auth
+value = username:password
+
+HTTP auth
+you need to add basic authentication with credentials from the data.txt file
+
+GET /api/show - Show all data from data.txt. Requires GET and header (http auth) authorization.
+POST /api/add  - Add an entry (a user) to data.txt. Requires POST and header (http auth) authorization.
+To add some new data you should create the pare of needed values in the request's body after the "auth" key
+key = username value = the data, need to be added
+key = password value = the data, need to be added
+
+POST /api/delete - Delete an entry (a user) from data.txt. Requires POST, GET and header (http auth) authorization.

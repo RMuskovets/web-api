@@ -6,14 +6,16 @@ auth = HTTPBasicAuth()
 
 @auth.verify_password
 def check_pass(nm, pw):
+    # авторизація по хеадеру
     for l in open('data.txt', 'r').readlines():
         if nm == l.strip().split(':')[0].strip()\
         and pw== l.strip().split(':')[1].strip():
             return True
     return False
 
-def header_auth():
-    if 'auth' in request.args and request.args['auth']:
+def auth_in_url():
+    # авторизація для ГЕТ запитів (по УРЛ)
+    if request.args['auth']:
         auth = request.args['auth']
         if ':' in auth:
             if check_pass(auth.split(':')[0], auth.split(':')[1]):
@@ -24,7 +26,8 @@ def header_auth():
     return False
 
 def post_auth():
-    if 'auth' in request.form and request.form['auth']:
+    # авторизація через БОДІ запиту
+    if request.form['auth']:
         auth = request.form['auth']
         if ':' in auth:
             if check_pass(auth.split(':')[0], auth.split(':')[1]):
@@ -37,24 +40,26 @@ def post_auth():
 @app.route('/api/show')
 @auth.login_required
 def get():
-    if not header_auth():
-        return '{"error":"auth-GET"}'
+    if not auth_in_url():
+        return '{"error":"auth"}'
     l = []
     for l_ in open('data.txt', 'r').readlines():
-        if ':' in l_:
-            n, p = l_.split(':')
-            n, p = n.strip(), p.strip()
-            l.append(f'"{n}":"{p}"')
+        n, p = l_.split(':')
+        n, p = n.strip(), p.strip()
+        l.append(f'"{n}":"{p}"')
     return '{' + ','.join(l) + '}'
 
 @app.route('/api/add', methods=['POST'])
 @auth.login_required
 def post():
-    if not header_auth():
+    if not auth_in_url():
         return '{"error":"auth-GET"}'
     if not post_auth():
         return '{"error":"auth-POST"}'
+    if not post_auth():
+        return '{"error":"auth"}'
     post = request.form
+    print(post, post['username'], post['password'])
     nm, pw = post['username'], post['password']
     l = f'{nm}:{pw}\n'
     with open('data.txt', 'a') as f:
@@ -65,7 +70,7 @@ def post():
 @app.route('/api/delete', methods=['POST'])
 @auth.login_required
 def delete():
-    if not header_auth():
+    if not auth_in_url():
         return '{"error":"auth-GET"}'
     if not post_auth():
         return '{"error":"auth-POST"}'
